@@ -1,5 +1,0 @@
-**/logs
-*.log
-*/target
-*/null
-*/test-output

@@ -2,4 +2,7 @@
 *.log
 */target
 */null
-*/test-output
+test-output/
+null/
+reports/
+target/
