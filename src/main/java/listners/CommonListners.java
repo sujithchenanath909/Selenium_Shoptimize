@@ -25,13 +25,14 @@ public class CommonListners extends Base implements ITestListener  {
 	
 	@Override
 	public void onTestStart(ITestResult result) {
-		
+		System.out.println("Test Started");
 		test=	extent.createTest(result.getMethod().getMethodName());
 		extentTest.set(test);
 	}
 
 	@Override
 	public void onTestSuccess(ITestResult result) {
+		System.out.println("In test success listner");
 		extentTest.get().log(Status.PASS, "Test Success");
 		
 	}

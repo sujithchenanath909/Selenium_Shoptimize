@@ -7,8 +7,8 @@ public class ExtentReportNG {
 	public static ExtentReports extent=null;
 	
 	public static ExtentReports getReportobject() {
-		
-		String path =System.getProperty("usr.dir")+"\\reports\\index.html";
+
+		String path =System.getProperty("user.dir")+"\\reports\\index.html";
 		ExtentSparkReporter reporter=new ExtentSparkReporter(path);
 		reporter.config().setReportName("Shoptimize_Reports");
 		reporter.config().setDocumentTitle("Test Results");

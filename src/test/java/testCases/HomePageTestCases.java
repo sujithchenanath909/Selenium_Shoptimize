@@ -8,11 +8,15 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import pageActions.HomePageActions;
 import util.Base;
 import util.Constants;
+
+
+@Listeners(listners.CommonListners.class)
 
 public class HomePageTestCases extends Base {
 
@@ -20,14 +24,12 @@ public class HomePageTestCases extends Base {
 	public static Logger log=LogManager.getLogger(HomePageTestCases.class.getName());
 	@BeforeTest
 	public void initialiseDriver() throws IOException {
-
 		driver = initializeDriver();
-		
+		driver.manage().window().maximize();
 	}
 
 	
 	public void homePageNavigation() throws IOException {
-
 		//initialiseDriver();
 		driver.get(getUrl("url"));
 	}
@@ -61,13 +63,15 @@ public class HomePageTestCases extends Base {
 
 		log.info("Validating Ascending sort based on Product Name");
 		Assert.assertTrue(homePageActions.validateProductNamesortingAscending(driver), "Product Name sort Ascending failed ");
+		log.info(" Ascending sort based on Product Name validated succesfully");
 		
 		log.info("Validating Descending sort based on Product Name");
 		Assert.assertTrue(homePageActions.validateProductNamesortingDescending(driver), "Product Name Descending failed ");
+		log.info(" Descending sort based on Product Name validated sucessfully");
 	}
 	
 	@AfterTest
-	public void TearDown() {
+	public void TearDown() {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
 		
 		driver.close();
 	}
