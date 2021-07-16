@@ -2,5 +2,8 @@ package util;
 
 public class Constants {
 
-	public static final String PAGETITLE="Manage a single bookingTest";
+	public static enum SortCategory
+	    {
+	        Popular, Product_Name, Price,New,Most_Viewed,BestSellers;
+	    }
 }

@@ -1,4 +1,4 @@
-package util;
+package listners;
 
 import java.io.IOException;
 
@@ -11,7 +11,10 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
-public class Listners extends Base implements ITestListener  {
+import util.Base;
+import util.ExtentReportNG;
+
+public class CommonListners extends Base implements ITestListener  {
 	
 	ExtentReports extent=ExtentReportNG.getReportobject();
 	ExtentTest test;

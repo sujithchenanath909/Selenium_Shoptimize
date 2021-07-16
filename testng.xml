@@ -3,12 +3,7 @@
 <suite name="Suite">
 
 <listeners>
-<listener class-name="util.Listners"/>
+<listener class-name="listners.CommonListners"/>
 </listeners>
 
-  <test thread-count="5" name="Test">
-    <classes>
-      <class name="testCases.HomePageTestCases"/>
-    </classes>
-  </test> <!-- Test -->
 </suite> <!-- Suite -->

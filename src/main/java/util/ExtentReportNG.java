@@ -10,7 +10,7 @@ public class ExtentReportNG {
 		
 		String path =System.getProperty("usr.dir")+"\\reports\\index.html";
 		ExtentSparkReporter reporter=new ExtentSparkReporter(path);
-		reporter.config().setReportName("RakutenTravelAutomation");
+		reporter.config().setReportName("Shoptimize_Reports");
 		reporter.config().setDocumentTitle("Test Results");
 		
 		extent=new ExtentReports();

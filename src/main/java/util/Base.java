@@ -30,8 +30,12 @@ public class Base {
 		loadProperties();
 
 		String browser =System.getProperty("browser");
+		//if user does not provide from command line 
+		if(browser==null) {
+			browser="chrome";
+		}
 		String driverPath = prop.getProperty("driverPath");
-
+		System.out.println("DriverPath ::"+driverPath);
 		// initialize driver according to browser
 		if (browser.contains("chrome")) {
 			ChromeOptions options=new ChromeOptions();
