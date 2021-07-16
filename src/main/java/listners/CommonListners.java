@@ -2,6 +2,8 @@ package listners;
 
 import java.io.IOException;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
@@ -10,6 +12,7 @@ import org.testng.ITestResult;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
+
 
 import util.Base;
 import util.ExtentReportNG;
@@ -21,18 +24,18 @@ public class CommonListners extends Base implements ITestListener  {
 	ThreadLocal<ExtentTest> extentTest=new ThreadLocal<ExtentTest>();
 	
 	
-	//public static Logger log=(Logger) LogManager.getLogger(Listners.class.getName());
+	public static Logger log=LogManager.getLogger(CommonListners.class.getName());
 	
 	@Override
 	public void onTestStart(ITestResult result) {
-		System.out.println("Test Started");
+		log.info(result.getName() + ":: Test case started !!");
 		test=	extent.createTest(result.getMethod().getMethodName());
 		extentTest.set(test);
 	}
 
 	@Override
 	public void onTestSuccess(ITestResult result) {
-		System.out.println("In test success listner");
+		log.info(result.getName() + ":: Test case Success !!");
 		extentTest.get().log(Status.PASS, "Test Success");
 		
 	}
@@ -40,6 +43,7 @@ public class CommonListners extends Base implements ITestListener  {
 	@Override
 	public void onTestFailure(ITestResult result) {
 		WebDriver driver=null;
+		log.info(result.getName() + ":: Test case failed !!");
 		try {
 			driver=(WebDriver) result.getTestClass().getRealClass().getDeclaredField("driver").
 					get(result.getInstance());

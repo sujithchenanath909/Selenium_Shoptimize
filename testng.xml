@@ -2,8 +2,4 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
 
-<listeners>
-<listener class-name="listners.CommonListners"/>
-</listeners>
-
 </suite> <!-- Suite -->
