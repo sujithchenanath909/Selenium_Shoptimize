@@ -11,8 +11,6 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import pageActions.HomePageActions;
-import pageObjects.HomePage;
-import pageObjects.ManageBooking;
 import util.Base;
 import util.Constants;
 
@@ -27,7 +25,7 @@ public class HomePageTestCases extends Base {
 		
 	}
 
-	@Test
+	
 	public void homePageNavigation() throws IOException {
 
 		//initialiseDriver();
@@ -40,11 +38,10 @@ public class HomePageTestCases extends Base {
 		homePageNavigation();
 		HomePageActions homePageActions = new HomePageActions();
 		
-		log.info("selecting sort drop down for Product Name");
+		log.info("selecting sort drop down for Price");
 		homePageActions.selectSortDropDown(Constants.SortCategory.Price, driver);
 		log.info("selected sort drop down for Price");
-		System.out.println(homePageActions.validatePricesortingAscending(driver));
-		
+
 		log.info("Validating Ascending sort based on price");
 		Assert.assertTrue(homePageActions.validatePricesortingAscending(driver), "Price sort Ascending failed ");
 		
@@ -52,7 +49,22 @@ public class HomePageTestCases extends Base {
 		Assert.assertTrue(homePageActions.validatePricesortingDescending(driver), "Price sort Descending failed ");
 	}
 	
-	
+	@Test
+	public void VerifyProductNameSort() throws IOException, InterruptedException {
+
+		homePageNavigation();
+		HomePageActions homePageActions = new HomePageActions();
+		
+		log.info("selecting sort drop down for Product Name");
+		homePageActions.selectSortDropDown(Constants.SortCategory.Product_Name, driver);
+		log.info("selected sort drop down for Product Name");
+
+		log.info("Validating Ascending sort based on Product Name");
+		Assert.assertTrue(homePageActions.validateProductNamesortingAscending(driver), "Product Name sort Ascending failed ");
+		
+		log.info("Validating Descending sort based on Product Name");
+		Assert.assertTrue(homePageActions.validateProductNamesortingDescending(driver), "Product Name Descending failed ");
+	}
 	
 	@AfterTest
 	public void TearDown() {

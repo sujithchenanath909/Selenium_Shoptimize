@@ -23,11 +23,21 @@ public class HomePage {
 	List<WebElement> finalPrice;
 
 	@FindBy(xpath = "//a[@title='Set Descending Direction']")
-	private WebElement setAscendingDirection;
+	private WebElement setDescendingDirection;
 	
-	
-	public WebElement getSetAscendingDirection() {
-		return setAscendingDirection;
+	@FindBy(xpath = "	//a[@class='product-item-link']")
+	List<WebElement> productText;
+
+
+
+
+	public List<WebElement> getProductText() {
+		return productText;
+	}
+
+
+	public WebElement getSetDescendingDirection() {
+		return setDescendingDirection;
 	}
 
 
