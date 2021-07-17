@@ -52,7 +52,7 @@ public class CommonListners extends Base implements ITestListener  {
 			e.printStackTrace();
 		}
 		
-		//log.info("Going to capture Screenshot inside TestFailure method");
+		log.info("Going to capture Screenshot inside TestFailure method");
 		//Capture ScreenShot on test failure
 		try {
 			extentTest.get().addScreenCaptureFromPath(takeScreenShotPath(result.getMethod().getMethodName(),driver), result.getMethod().getMethodName());
