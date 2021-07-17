@@ -63,11 +63,11 @@ public class HomePageTestCases extends Base {
 
 		log.info("Validating Ascending sort based on Product Name");
 		Assert.assertTrue(homePageActions.validateProductNamesortingAscending(driver), "Product Name sort Ascending failed ");
-		log.info(" Ascending sort based on Product Name validated succesfully");
+		log.info(" Ascending sort based on Product Name validated successfully");
 		
 		log.info("Validating Descending sort based on Product Name");
 		Assert.assertTrue(homePageActions.validateProductNamesortingDescending(driver), "Product Name Descending failed ");
-		log.info(" Descending sort based on Product Name validated sucessfully");
+		log.info(" Descending sort based on Product Name validated successfully");
 	}
 	
 	@AfterTest
