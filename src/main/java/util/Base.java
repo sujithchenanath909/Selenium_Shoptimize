@@ -32,12 +32,14 @@ public class Base {
 		String browser =System.getProperty("browser");
 		//if user does not provide from command line 
 		if(browser==null) {
-			browser="chrome";
+			browser=prop.getProperty("browser");
+			log.info("No browser provided in command line so default browser "+ browser +" is loading ..");
+			
 		}
-		String driverPath = prop.getProperty("driverPath");
-		System.out.println("DriverPath ::"+driverPath);
+		String driverPath="";
 		// initialize driver according to browser
 		if (browser.contains("chrome")) {
+			 driverPath = prop.getProperty("chromeDriverPath");
 			ChromeOptions options=new ChromeOptions();
 			if(browser.contains("headless"))
 				options.addArguments("headless");
@@ -46,15 +48,13 @@ public class Base {
 			
 
 		} else if (browser.equals("firefox")) {
-
-			System.setProperty("webdriver.gecko.driver",
-					"E:\\SoftwareTestingCode\\WebDriver\\geckodriver-v0.29.0-win64\\geckodriver.exe");
+			 driverPath = prop.getProperty("fireFoxDriverPath");
+			System.setProperty("webdriver.gecko.driver",driverPath);
 			driver = new FirefoxDriver();
 
 		} else if (browser.equals("ie")) {
-
-			System.setProperty("webdriver.ie.driver",
-					"E:\\SoftwareTestingCode\\WebDriver\\IEDriverServer_Win32_3.150.1\\IEDriverServer.exe");
+			 driverPath = prop.getProperty("ieDriverPath");
+			System.setProperty("webdriver.ie.driver",driverPath);
 			driver = new InternetExplorerDriver();
 
 		}
