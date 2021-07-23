@@ -1,4 +1,4 @@
-package listners;
+package online.sujithchenanath.listeners;
 
 import java.io.IOException;
 
@@ -13,9 +13,8 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
-
-import util.Base;
-import util.ExtentReportNG;
+import online.sujithchenanath.util.base.Base;
+import online.sujithchenanath.util.base.ExtentReportNG;
 
 public class CommonListners extends Base implements ITestListener  {
 	
