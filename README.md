@@ -7,7 +7,7 @@ This is a maven based Java-TestNG framework .
 * Basic properties such as browser , base url and chrome driver path are updated in data.properties file 
     Update this file as per your driver binary path .
     
-* project can be executed from command line using > mvn clean test -Dtest=HomePageTestCases 
+* project can be executed from command line using > mvn clean test or mvn clean test -Dtest=HomePageTestCases
  ![alt text](https://github.com/sujithchenanath909/Selenium_Shoptimize/blob/main/ScreenShots/cmd.PNG)
 
 * Extent report is integrated into this and report will be generated at ../reports/index.html 
