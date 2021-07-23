@@ -1,4 +1,4 @@
-package util;
+package online.sujithchenanath.util.base;
 
 import java.io.File;
 import java.io.FileInputStream;
