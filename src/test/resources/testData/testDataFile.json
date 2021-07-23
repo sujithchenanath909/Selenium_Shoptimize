@@ -1,0 +1,8 @@
+ [
+    {
+      "testCase": "Verify error message on wrong userName",
+      "username": "test",
+      "password": "password",
+      "rememberMe": false
+    }
+  ]

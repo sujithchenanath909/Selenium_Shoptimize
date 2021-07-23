@@ -1,4 +1,4 @@
-package testCases;
+package online.sujithchenanath.testCases;
 
 import java.io.IOException;
 
@@ -11,12 +11,12 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import pageActions.HomePageActions;
-import util.Base;
-import util.Constants;
+import online.sujithchenanath.pageactions.HomePageActions;
+import online.sujithchenanath.util.base.Base;
+import online.sujithchenanath.util.base.GlobalConstants;
 
 
-@Listeners(listners.CommonListners.class)
+@Listeners(online.sujithchenanath.listeners.CommonListners.class)
 
 public class HomePageTestCases extends Base {
 
@@ -33,6 +33,7 @@ public class HomePageTestCases extends Base {
 		//initialiseDriver();
 		driver.get(getUrl("url"));
 	}
+	
 
 	@Test
 	public void VerifyPriceSort() throws IOException, InterruptedException {
@@ -41,7 +42,7 @@ public class HomePageTestCases extends Base {
 		HomePageActions homePageActions = new HomePageActions();
 		
 		log.info("selecting sort drop down for Price");
-		homePageActions.selectSortDropDown(Constants.SortCategory.Price, driver);
+		homePageActions.selectSortDropDown(GlobalConstants.SortCategory.Price, driver);
 		log.info("selected sort drop down for Price");
 
 		log.info("Validating Ascending sort based on price");
@@ -58,7 +59,7 @@ public class HomePageTestCases extends Base {
 		HomePageActions homePageActions = new HomePageActions();
 		
 		log.info("selecting sort drop down for Product Name");
-		homePageActions.selectSortDropDown(Constants.SortCategory.Product_Name, driver);
+		homePageActions.selectSortDropDown(GlobalConstants.SortCategory.Product_Name, driver);
 		log.info("selected sort drop down for Product Name");
 
 		log.info("Validating Ascending sort based on Product Name");

@@ -1,4 +1,4 @@
-package pageActions;
+package online.sujithchenanath.pageactions;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -8,8 +8,8 @@ import java.util.stream.Collectors;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 
-import pageObjects.HomePage;
-import util.Constants.SortCategory;
+import online.sujithchenanath.pageObjects.HomePage;
+import online.sujithchenanath.util.base.GlobalConstants.SortCategory;
 
 public class HomePageActions {
 

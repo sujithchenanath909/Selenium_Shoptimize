@@ -1,4 +1,4 @@
-package util;
+package online.sujithchenanath.util.base;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;

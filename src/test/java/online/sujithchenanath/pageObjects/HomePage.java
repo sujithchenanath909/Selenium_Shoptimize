@@ -1,4 +1,4 @@
-package pageObjects;
+package online.sujithchenanath.pageObjects;
 
 import java.util.List;
 

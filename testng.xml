@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
+<listeners>
+	  <listener class-name="online.sujithchenanath.listeners.CommonListners"/>
+	 <listener class-name="online.sujithchenanath.listeners.ConfigTransformListner"/>
+	</listeners>
  <test name = "HomePageTest">
       <classes>
-         <class name = "testCases.HomePageTestCases" />
+          <class name="online.sujithchenanath.testCases.HomePageTestCases"/>
+         <class name="online.sujithchenanath.testCases.TestDataExample"/>
       </classes>
    </test>
 </suite> <!-- Suite -->
