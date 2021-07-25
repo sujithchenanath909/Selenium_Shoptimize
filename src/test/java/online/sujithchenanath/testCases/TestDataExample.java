@@ -19,7 +19,7 @@ public class TestDataExample {
 		System.out.println(data.getUsername());
 		System.out.println(data.getPassword());
 	}
-
+ 
 	@Test(groups="dataExample",description="TestCase for testing test data configuration")
 	@TestData(source = "testDataFile", type = TestDataReaderFactory.JSON,dataBean="online.sujithchenanath.testdatabean.TestDataFile")
 	public void testMethod2(TestDataFile data) {

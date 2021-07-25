@@ -23,8 +23,26 @@
           <suiteXmlFiles>
             <suiteXmlFile>testng.xml</suiteXmlFile>
           </suiteXmlFiles>
+          <properties>
+          <property>
+              <name>usedefaultlisteners</name>
+              <value>false</value> <!-- disabling default listeners is optional -->
+            </property>
+             <property>
+              <name>listener</name>
+              <value>online.sujithchenanath.listeners.ConfigTransformListner,online.sujithchenanath.listeners.CommonListners</value>
+            </property>
+          </properties>
+        
         </configuration>
       </plugin>
+        <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>11</source>
+                    <target>11</target>
+                </configuration>
+            </plugin>
 </plugins>
   </build>
   <dependencies>
