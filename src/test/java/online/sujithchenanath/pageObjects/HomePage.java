@@ -28,7 +28,18 @@ public class HomePage {
 	@FindBy(xpath = "	//a[@class='product-item-link']")
 	List<WebElement> productText;
 
+	@FindBy(xpath = "//input[@id='search']")
+	private WebElement inputSearhBox;
 
+
+	public WebElement getInputSearhBox() {
+		return inputSearhBox;
+	}
+
+
+	public void setInputSearhBox(WebElement inputSearhBox) {
+		this.inputSearhBox = inputSearhBox;
+	}
 
 
 	public List<WebElement> getProductText() {

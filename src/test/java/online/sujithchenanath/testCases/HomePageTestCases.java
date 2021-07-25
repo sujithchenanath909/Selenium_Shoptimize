@@ -71,6 +71,15 @@ public class HomePageTestCases extends Base {
 		log.info(" Descending sort based on Product Name validated successfully");
 	}
 	
+	@Test
+	public void EntersearchBoxValue() throws IOException {
+		
+		homePageNavigation();
+		HomePageActions homePageActions = new HomePageActions();
+		homePageActions.EnterSearchBox(driver);
+		
+	}
+	
 	@AfterTest
 	public void TearDown() {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
 		

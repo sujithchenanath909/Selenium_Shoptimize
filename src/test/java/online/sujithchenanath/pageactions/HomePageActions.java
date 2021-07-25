@@ -88,6 +88,12 @@ public class HomePageActions {
 
 		return productNames.equals(sortedReverseProductNames);
 	}
+	
+	public void EnterSearchBox(WebDriver driver) {
+		
+		HomePage homePage = new HomePage(driver);
+		homePage.getInputSearhBox().sendKeys("SAMPLETEXT");
+	}
 
 	public String formatSortCategory(SortCategory category) {
 		return category.toString().replace("_", " ");
