@@ -6,11 +6,11 @@ public class TestDataReaderFactory {
 	
 	public static TestDataReader getTestDataReader(String sourceType) {
 		
-		TestDataReader reader=null;
+		TestDataReader sampleReader=null;
 		if(sourceType.equals(TestDataReaderFactory.JSON)) {
-			reader=new JsonTestDataReader();
+			sampleReader=new JsonTestDataReader();
 		}
-		return reader;
+		return sampleReader;
 	}
 	
 }
